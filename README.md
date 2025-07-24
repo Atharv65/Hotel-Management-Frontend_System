@@ -1,0 +1,1 @@
+Hotel Management Frontend System is a responsive web interface for a hotel chain named THE BHARAT. It includes 9 HTML pages like Booking, Rooms, Amenities, Visitors, and more—built using HTML, CSS, and JavaScript. This project showcases modern design, basic interactivity, and user-friendly navigation.
