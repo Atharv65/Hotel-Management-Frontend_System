@@ -1,316 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THE BHARAT Hotel - Booking</title>
-    <style>
-        body {
-            background-color: #121212;
-            color: #e0e0e0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>THE BHARAT Hotel - Booking</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #e0e0e0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
-        nav {
-            background-color: #1e1e1e;
-            padding: 15px;
-            text-align: center;
-        }
+    nav {
+      background-color: #1e1e1e;
+      padding: 15px;
+      text-align: center;
+    }
 
-        nav a {
-            color: #e0e0e0;
-            text-decoration: none;
-            margin: 0 15px;
-            padding: 8px 15px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
+    nav a {
+      color: #e0e0e0;
+      text-decoration: none;
+      margin: 0 15px;
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
 
-        nav a:hover {
-            background-color: #333;
-        }
+    nav a:hover {
+      background-color: #333;
+    }
 
-        .section {
-            padding: 40px;
-            background-size: cover;
-            background-position: center;
-            background-blend-mode: overlay;
-            background-color: rgba(0, 0, 0, 0.5);
-            display: flex; /* Use flexbox for layout */
-            justify-content: center; /* Center content horizontally */
-            align-items: center; /* Center content vertically */
-            min-height: 100vh; /* Ensure full viewport height */
-        }
+    .section {
+      padding: 40px;
+      background-image: url('https://images.stockcake.com/public/3/7/8/37803657-3da6-4aab-adb0-988ed4db72b5_large/hotel-receptionist-working-stockcake.jpg');
+      background-size: cover;
+      background-position: center;
+      background-blend-mode: overlay;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
 
-        .form-container {
-            max-width: 600px;
-            width: 100%; /* Ensure it takes full width within the centered section */
-            padding: 20px;
-            background-color: #1e1e1e;
-            border-radius: 8px;
-        }
+    .form-container {
+      max-width: 600px;
+      width: 100%;
+      padding: 20px;
+      background-color: #1e1e1e;
+      border-radius: 8px;
+    }
 
-        .form-container h2 {
-            color: #f0f0f0;
-            text-align: center;
-            margin-bottom: 20px;
-        }
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #f0f0f0;
+    }
 
-        .form-container label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold; /* Bold labels */
-        }
+    .form-container label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
 
-        .form-container input[type="text"],
-        .form-container input[type="email"],
-        .form-container input[type="tel"],
-        .form-container input[type="date"],
-        .form-container input[type="number"],
-        .form-container input[type="password"],
-        .form-container select,
-        .form-container textarea {
-            width: calc(100% - 22px);
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #333;
-            background-color: #333;
-            color: #e0e0e0;
-            border-radius: 5px;
-        }
+    .form-container input,
+    .form-container select,
+    .form-container textarea {
+      width: calc(100% - 22px);
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #333;
+      background-color: #333;
+      color: #e0e0e0;
+      border-radius: 5px;
+    }
 
-        .form-container button {
-            background-color: #007bff;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            width: 100%; /* Full width buttons */
-        }
+    .form-container button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: 100%;
+    }
 
-        .form-container button:hover {
-            background-color: #0056b3;
-        }
+    .form-container button:hover {
+      background-color: #0056b3;
+    }
 
-        .booking-terms {
-            text-align: center;
-            margin-top: 20px;
-            color: #ccc;
-        }
+    .booking-terms {
+      text-align: center;
+      margin-top: 20px;
+      color: #ccc;
+    }
 
-        .booking-terms a {
-            color: #007bff;
-            text-decoration: none;
-        }
+    .booking-terms a {
+      color: #007bff;
+      text-decoration: none;
+    }
 
-        .booking-terms a:hover {
-            text-decoration: underline;
-        }
+    .booking-terms a:hover {
+      text-decoration: underline;
+    }
 
-        #login-section {
-            display: none;
-        }
+    .login-button {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
 
-        #booking-section {
-            display: block;
-        }
+    .login-button button {
+      background-color: #444;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
 
-        #login-section h2 {
-            text-align: center;
-            color: #f0f0f0;
-            margin-bottom: 20px;
-        }
+    .login-button button:hover {
+      background-color: #666;
+    }
 
-        #login-section button {
-            margin-top: 10px;
-        }
+    .hidden {
+      display: none;
+    }
 
-        .login-button {
-             display: flex;
-             justify-content: center; /* Horizontal center */
-             margin-top: 20px;
-        }
+    #availability-display,
+    #pricing-display {
+      margin-top: 10px;
+      font-weight: bold;
+      text-align: center;
+    }
 
-        .login-button button {
-            color: #ffffff;
-            background-color: #444;
-            padding: 10px 20px;
-            border-radius: 5px;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
+    #availability-display.error,
+    #pricing-display.error {
+      color: red;
+    }
 
-        .login-button button:hover {
-             background-color: #666;
-        }
-
-        #availability-display,
-        #pricing-display {
-            margin-top: 10px;
-            font-weight: bold;
-            text-align: center;
-        }
-        #availability-display.error, #pricing-display.error{
-            color: red;
-        }
-        .form-description {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #ccc;
-        }
-
-    </style>
+    .form-description {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #ccc;
+    }
+  </style>
 </head>
 <body>
-    <nav>
-        <a href="index.html">HOME</a>
-        <a href="booking.html">BOOKING</a>
-        <a href="visitors.html">VISITORS</a>
-        <a href="rooms.html">ROOMS</a>
-        <a href="staff.html">STAFF</a>
-        <a href="billing.html">BILLING</a>
-        <a href="amenities.html">AMENITIES</a>
-    </nav>
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="booking.html">BOOKING</a>
+    <a href="visitors.html">VISITORS</a>
+    <a href="rooms.html">ROOMS</a>
+    <a href="staff.html">STAFF</a>
+    <a href="billing.html">BILLING</a>
+    <a href="amenities.html">AMENITIES</a>
+  </nav>
 
-    <section class="section" style="background-image: url('https://images.stockcake.com/public/3/7/8/37803657-3da6-4aab-adb0-988ed4db72b5_large/hotel-receptionist-working-stockcake.jpg');">
-        <div id="booking-section">
-            <div class="form-container">
-                <h2>Reserve Your Room</h2>
-                <p class="form-description">Please fill out the form below to book your stay at THE BHARAT. Our reservation team will confirm your booking shortly.</p>
-                <label for="name">Full Name (Indian Format):</label>
-                <input type="text" id="name" name="name" placeholder="e.g., Ramesh Kumar Sharma" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" required>
-                <label for="roomType">Room Type:</label>
-                <select id="roomType" name="roomType" required>
-                    <option value="">Select Room Type</option>
-                    <option value="single">Standard (Single)</option>
-                    <option value="double">Double (Deluxe)</option>
-                    <option value="suite">Executive Suite</option>
-                    <option value="deluxe">Presidential Suite</option>
-                </select>
-                <label for="checkin">Check-in Date:</label>
-                <input type="date" id="checkin" name="checkin" required>
-                <label for="checkout">Check-out Date:</label>
-                <input type="date" id="checkout" name="checkout" required>
-                <label for="guests">Number of Guests:</label>
-                <input type="number" id="guests" name="guests" min="1" required>
-                <label for="specialRequests">Special Requests/Comments:</label>
-                <textarea id="specialRequests" name="specialRequests" rows="4"></textarea>
-                <button id="checkAvailability">Check Availability & Pricing</button>
-                <div id="availability-display"></div>
-                <div id="pricing-display"></div>
-                <button id="bookButton">Book Your Stay</button>
-            </div>
-            <p class="booking-terms">By clicking "Book Your Stay," you agree to our <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a>.</p>
-            <div class="login-button">
-                 <button id="loginButton">Already have an account? Login</button>
-            </div>
-        </div>
+  <section class="section">
+    <div id="booking-section">
+      <div class="form-container">
+        <h2>Reserve Your Room</h2>
+        <p class="form-description">Please fill out the form below to book your stay at THE BHARAT.</p>
 
-        <div id="login-section" style="display: none;">
-            <div class="form-container">
-                <h2>Login</h2>
-                <label for="loginEmail">Email:</label>
-                <input type="email" id="loginEmail" name="loginEmail" required>
-                <label for="loginPassword">Password:</label>
-                <input type="password" id="loginPassword" name="loginPassword" required>
-                <button id="loginSubmit">Login</button>
-            </div>
-            <button id="backToBooking">Back to Booking</button>
-        </div>
-    </section>
+        <label for="name">Full Name (Indian Format):</label>
+        <input type="text" id="name" name="name" placeholder="e.g., Ramesh Kumar Sharma" required />
 
-    <script>
-        document.getElementById('loginButton').addEventListener('click', function() {
-            document.getElementById('booking-section').style.display = 'none';
-            document.getElementById('login-section').style.display = 'block';
-        });
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
 
-        document.getElementById('backToBooking').addEventListener('click', function() {
-            document.getElementById('booking-section').style.display = 'block';
-            document.getElementById('login-section').style.display = 'none';
-        });
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required />
 
-        document.getElementById('checkAvailability').addEventListener('click', function() {
-            const checkinDate = document.getElementById('checkin').value;
-            const checkoutDate = document.getElementById('checkout').value;
-            const roomType = document.getElementById('roomType').value;
-            const availabilityDisplay = document.getElementById('availability-display');
-            const pricingDisplay = document.getElementById('pricing-display');
+        <label for="roomType">Room Type:</label>
+        <select id="roomType" name="roomType" required>
+          <option value="">Select Room Type</option>
+          <option value="single">Standard (Single)</option>
+          <option value="double">Double (Deluxe)</option>
+          <option value="suite">Executive Suite</option>
+          <option value="deluxe">Presidential Suite</option>
+        </select>
 
-            availabilityDisplay.textContent = '';
-            pricingDisplay.textContent = '';
-            availabilityDisplay.classList.remove('error');
-            pricingDisplay.classList.remove('error');
+        <label for="checkin">Check-in Date:</label>
+        <input type="date" id="checkin" name="checkin" required />
 
-            if (checkinDate && checkoutDate && roomType) {
-                fetch(/api/availability?checkin=${checkinDate}&checkout=${checkoutDate}&roomType=${roomType})
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error(HTTP error! status: ${response.status});
-                        }
-                        return response.json();
-                    })
-                    .then(data => {
-                        if (data.availability) {
-                            availabilityDisplay.textContent = 'Availability: Available';
-                            pricingDisplay.textContent = Price: INR ${data.price};
-                        } else {
-                            availabilityDisplay.textContent = 'Availability: Not Available';
-                            pricingDisplay.textContent = 'Price: N/A';
-                        }
-                    })
-                    .catch(error => {
-                        console.error('Error fetching availability:', error);
-                        availabilityDisplay.textContent = 'Error fetching availability.';
-                        pricingDisplay.textContent = '';
-                        availabilityDisplay.classList.add('error');
-                        pricingDisplay.classList.add('error');
-                    });
-            } else {
-                alert('Please select Check-in Date, Check-out Date, and Room Type.');
-            }
-        });
+        <label for="checkout">Check-out Date:</label>
+        <input type="date" id="checkout" name="checkout" required />
 
-        document.getElementById('bookButton').addEventListener('click', function() {
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            const roomType = document.getElementById('roomType').value;
-            const checkin = document.getElementById('checkin').value;
-            const checkout = document.getElementById('checkout').value;
-            const guests = document.getElementById('guests').value;
-            const specialRequests = document.getElementById('specialRequests').value;
+        <label for="guests">Number of Guests:</label>
+        <input type="number" id="guests" name="guests" min="1" required />
 
-            if (name && email && phone && roomType && checkin && checkout && guests) {
-                alert('Booking request submitted. Our team will contact you shortly.');
-                // Here, you would typically send this data to a server for processing.
-            } else {
-                alert('Please fill in all required fields.');
-            }
-        });
+        <label for="specialRequests">Special Requests/Comments:</label>
+        <textarea id="specialRequests" name="specialRequests" rows="4" placeholder="Optional"></textarea>
 
-        document.getElementById('loginSubmit').addEventListener('click', function() {
-            const loginEmail = document.getElementById('loginEmail').value;
-            const loginPassword = document.getElementById('loginPassword').value;
+        <button id="checkAvailability">Check Availability & Pricing</button>
+        <div id="availability-display"></div>
+        <div id="pricing-display"></div>
 
-            // In a real application, you would send this data to a server for authentication.
-            // For demonstration purposes, we'll just check if the fields are not empty.
-            if (loginEmail && loginPassword) {
-                alert('Login successful! Redirecting to your bookings/profile.'); // Replace with actual redirection logic
-                // Here, you'd implement the actual login logic.
-            } else {
-                alert('Please enter your email and password.');
-            }
-        });
-    </script>
+        <button id="bookButton">Book Your Stay</button>
+      </div>
+
+      <p class="booking-terms">
+        By clicking "Book Your Stay," you agree to our <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a>.
+      </p>
+
+      <div class="login-button">
+        <button id="loginButton">Already have an account? Login</button>
+      </div>
+    </div>
+
+    <div id="login-section" class="hidden">
+      <div class="form-container">
+        <h2>Login</h2>
+        <label for="loginEmail">Email:</label>
+        <input type="email" id="loginEmail" name="loginEmail" required />
+
+        <label for="loginPassword">Password:</label>
+        <input type="password" id="loginPassword" name="loginPassword" required />
+
+        <button id="loginSubmit">Login</button>
+      </div>
+
+      <div class="login-button">
+        <button id="backToBooking">Back to Booking</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const $ = (id) => document.getElementById(id);
+
+      $('loginButton').addEventListener('click', () => {
+        $('booking-section').classList.add('hidden');
+        $('login-section').classList.remove('hidden');
+      });
+
+      $('backToBooking').addEventListener('click', () => {
+        $('login-section').classList.add('hidden');
+        $('booking-section').classList.remove('hidden');
+      });
+
+      $('checkAvailability').addEventListener('click', () => {
+        const checkinDate = $('checkin')?.value;
+        const checkoutDate = $('checkout')?.value;
+        const roomType = $('roomType')?.value;
+        const availabilityDisplay = $('availability-display');
+        const pricingDisplay = $('pricing-display');
+
+        availabilityDisplay.textContent = '';
+        pricingDisplay.textContent = '';
+        availabilityDisplay.classList.remove('error');
+        pricingDisplay.classList.remove('error');
+
+        if (checkinDate && checkoutDate && roomType) {
+          fetch(`/api/availability?checkin=${checkinDate}&checkout=${checkoutDate}&roomType=${roomType}`)
+            .then((res) => {
+              if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+              return res.json();
+            })
+            .then((data) => {
+              availabilityDisplay.textContent = data.availability
+                ? 'Availability: Available'
+                : 'Availability: Not Available';
+
+              pricingDisplay.textContent = data.availability
+                ? `Price: INR ${data.price}`
+                : 'Price: N/A';
+            })
+            .catch((err) => {
+              console.error('Error:', err);
+              availabilityDisplay.textContent = 'Error fetching availability.';
+              pricingDisplay.textContent = '';
+              availabilityDisplay.classList.add('error');
+              pricingDisplay.classList.add('error');
+            });
+        } else {
+          alert('Please select Check-in Date, Check-out Date, and Room Type.');
+        }
+      });
+
+      $('bookButton').addEventListener('click', () => {
+        const name = $('name')?.value.trim();
+        const email = $('email')?.value.trim();
+        const phone = $('phone')?.value.trim();
+        const roomType = $('roomType')?.value;
+        const checkin = $('checkin')?.value;
+        const checkout = $('checkout')?.value;
+        const guests = $('guests')?.value;
+        const specialRequests = $('specialRequests')?.value.trim();
+
+        if (name && email && phone && roomType && checkin && checkout && guests) {
+          alert('Booking request submitted. Our team will contact you shortly.');
+        } else {
+          alert('Please fill in all required fields.');
+        }
+      });
+
+      $('loginSubmit').addEventListener('click', () => {
+        const loginEmail = $('loginEmail')?.value.trim();
+        const loginPassword = $('loginPassword')?.value.trim();
+
+        if (loginEmail && loginPassword) {
+          alert('Login successful! Redirecting...');
+        } else {
+          alert('Please enter your email and password.');
+        }
+      });
+    });
+  </script>
 </body>
 </html>

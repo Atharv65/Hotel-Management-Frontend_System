@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE BHARAT Hotel - Visitors</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #1e1e1e;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #e0e0e0;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #333;
+        }
+
+        .section {
+            padding: 40px;
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .section h2 {
+            color: #f0f0f0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .visitors-details {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #1e1e1e;
+            border-radius: 8px;
+        }
+
+        .visitors-details p {
+            margin-bottom: 15px;
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .table th, .table td {
+            border: 1px solid #333;
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        .table th {
+            background-color: #333;
+            color: #e0e0e0;
+        }
+
+        .table tr:nth-child(even) {
+            background-color: #2a2a2a;
+        }
+
+        .visitor-image {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-right: 15px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="booking.html">BOOKING</a>
+        <a href="visitors.html">VISITORS</a>
+        <a href="rooms.html">ROOMS</a>
+        <a href="staff.html">STAFF</a>
+        <a href="billing.html">BILLING</a>
+        <a href="amenities.html">AMENITIES</a>
+    </nav>
+    <section class="section visitors-section" style="background-image: url('https://www.swipedon.com/hs-fs/hubfs/_SwipedOn%20Product%20Photography/SwipedOn%20Reception%202.jpg?width=817&height=544&name=SwipedOn%20Reception%202.jpg');">
+        <h2>Our Esteemed Visitors</h2>
+        <div class="visitors-details">
+            <p>Welcome to the vibrant tapestry of guests at THE BHARAT Hotel. Our visitors' section provides a comprehensive look into the diverse individuals who have graced our hotel with their presence, each contributing to the rich narrative of our hospitality.</p>
+            <p>We believe in transparency and providing detailed information to enhance the experience of our future guests. This section is regularly updated to reflect the latest arrivals and departures, ensuring you have the most current insights into our esteemed clientele.</p>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Visitor Name</th>
+                        <th>Room Number</th>
+                        <th>Check-in Date & Time</th>
+                        <th>Check-out Date & Time</th>
+                        <th>Guests</th>
+                        <th>Purpose</th>
+                        <th>Requests</th>
+                        <th>Nationality</th>
+                        <th>Contact</th>
+                    </tr>
+                </thead>
+                <tbody id="visitorTableBody">
+                </tbody>
+            </table>
+
+            <p><strong>Visitor Demographics:</strong></p>
+            <p>Our guest profile reflects a broad spectrum of individuals, including families, business travelers, couples, and solo adventurers. We are committed to providing a welcoming and inclusive environment for all our guests, regardless of their background or purpose of visit. Our detailed records help us understand and cater to the unique needs of each visitor.</p>
+
+            <p><strong>Feedback and Testimonials:</strong></p>
+            <p>We value the feedback of our guests and continuously strive to enhance their experience. Many of our visitors have shared their positive experiences, highlighting the exceptional service, luxurious accommodations, and exquisite dining options at THE BHARAT. These testimonials are a testament to our commitment to excellence.</p>
+
+            <p><strong>Visitor Statistics:</strong></p>
+            <p>In the past month, we have welcomed over 500 guests from various parts of India and around the world. Our occupancy rate remains consistently high, reflecting the popularity and reputation of THE BHARAT as a premier destination for discerning travelers. We track key statistics to ensure we maintain our high standards and continue to attract a diverse clientele.</p>
+
+            <p><strong>Visitor Trends:</strong></p>
+            <p>We have observed a growing trend among our guests towards seeking personalized experiences and authentic cultural immersion. To cater to this demand, we offer a range of curated tours, cultural events, and culinary experiences that showcase the rich heritage of our region. Our ability to adapt to these trends ensures we remain a top choice for modern travelers.</p>
+
+            <p><strong>Visitor Satisfaction:</strong></p>
+            <p>Our commitment to guest satisfaction is unwavering. We continuously monitor and evaluate our services to ensure that we meet and exceed the expectations of our visitors. Our goal is to create memorable experiences that leave a lasting impression, fostering loyalty and positive word-of-mouth.</p>
+
+            <p><strong>Visitor Privacy:</strong></p>
+            <p>We respect the privacy of our guests and adhere to strict confidentiality standards. All visitor information is securely stored and used only for internal purposes, such as improving our services and enhancing the guest experience. We ensure compliance with all relevant data protection regulations.</p>
+        </div>
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const visitors = [
+                {
+                    name: "Mrs. Ananya Sharma",
+                    room: 201,
+                    checkin: "2025-03-10 14:00",
+                    checkout: "2025-03-13 12:00",
+                    guests: 2,
+                    purpose: "Leisure",
+                    requests: "Extra pillows, late check-out",
+                    nationality: "Indian",
+                    contact: "+91 9876543210",
+                    image: "https://randomuser.me/api/portraits/women/1.jpg"
+                },
+                {
+                    name: "Mr. Rajesh Patel",
+                    room: 305,
+                    checkin: "2025-03-11 16:00",
+                    checkout: "2025-03-14 11:00",
+                    guests: 1,
+                    purpose: "Business",
+                    requests: "High-speed internet, quiet room",
+                    nationality: "Indian",
+                    contact: "+91 8765432109",
+                    image: "https://randomuser.me/api/portraits/men/2.jpg"
+                },
+                {
+                    name: "Ms. Isabella Rodriguez",
+                    room: 410,
+                    checkin: "2025-03-12 15:00",
+                    checkout: "2025-03-15 13:00",
+                    guests: 2,
+                    purpose: "Tourism",
+                    requests: "City view, guided tour",
+                    nationality: "Spanish",
+                    contact: "+34 123456789",
+                    image: "https://randomuser.me/api/portraits/women/3.jpg" 
+                },
+                {
+                        name: "Mr. Kenji Tanaka",
+                        room: 502,
+                        checkin: "2025-03-13 18:00",
+                        checkout: "2025-03-16 10:00",
+                        guests: 3,
+                        purpose: "Family Vacation",
+                        requests: "Connecting rooms, early breakfast",
+                        nationality: "Japanese",
+                        contact: "+81 987654321",
+                        image: "https://randomuser.me/api/portraits/men/4.jpg"
+                    },
+                    {
+                        name: "Mrs. Fatima Khan",
+                        room: 210,
+                        checkin: "2025-03-14 13:00",
+                        checkout: "2025-03-17 14:00",
+                        guests: 1,
+                        purpose: "Conference",
+                        requests: "Meeting room access, airport transfer",
+                        nationality: "Indian",
+                        contact: "+91 7654321098",
+                        image: "https://randomuser.me/api/portraits/women/5.jpg"
+                    }
+                ];
+
+                const visitorTableBody = document.getElementById("visitorTableBody");
+                if (visitorTableBody) {
+                    visitors.forEach(visitor => {
+                        const row = visitorTableBody.insertRow();
+                        const imageCell = row.insertCell();
+                        const image = document.createElement('img');
+                        image.src = visitor.image;
+                        image.alt = visitor.name;
+                        image.classList.add('visitor-image');
+                        imageCell.appendChild(image);
+                        row.insertCell().textContent = visitor.name;
+                        row.insertCell().textContent = visitor.room;
+                        row.insertCell().textContent = visitor.checkin;
+                        row.insertCell().textContent = visitor.checkout;
+                        row.insertCell().textContent = visitor.guests;
+                        row.insertCell().textContent = visitor.purpose;
+                        row.insertCell().textContent = visitor.requests;
+                        row.insertCell().textContent = visitor.nationality;
+                        row.insertCell().textContent = visitor.contact;
+                    });
+                }
+            });
+        </script>
+    </body>
+</html>

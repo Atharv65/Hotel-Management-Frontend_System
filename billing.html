@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE BHARAT Hotel - Billing Information</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-image: url('https://www.pnakindia.com/img/hotel-about.png');
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        nav {
+            background-color: rgba(30, 30, 30, 0.9);
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a {
+            color: #e0e0e0;
+            text-decoration: none;
+            margin: 0 25px;
+            padding: 12px 20px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            position: relative;
+        }
+
+        nav a:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #ffcc00;
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.3s ease-in-out 0s;
+        }
+
+        nav a:hover:before, nav a.active:before {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+
+        nav a:hover {
+            background-color: rgba(51, 51, 51, 0.8);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .billing-section {
+            padding: 40px;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: rgba(30, 30, 30, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1s ease-out;
+        }
+
+        .billing-section h2 {
+            color: #ffcc00;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            position: relative;
+            display: inline-block;
+        }
+
+        .billing-section h2:before {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background-color: #ffcc00;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .billing-section p {
+            color: #ccc;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .billing-details {
+            margin-top: 20px;
+        }
+
+        .billing-details h3 {
+            color: #ffcc00;
+            margin-bottom: 10px;
+        }
+
+        .billing-details ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .billing-details li {
+            margin-bottom: 10px;
+            color: #ccc;
+        }
+
+        .billing-details strong {
+            color: #e0e0e0;
+        }
+
+        .payment-options {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .payment-options button {
+            background-color: #ffcc00;
+            color: #121212;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .payment-options button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .guest-services-section {
+            display: none; /* Initially hidden */
+            padding: 20px;
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: rgba(30, 30, 30, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .guest-services-section h3 {
+            color: #ffcc00;
+            margin-bottom: 15px;
+        }
+
+        .guest-services-section p {
+            color: #ccc;
+            margin-bottom: 10px;
+        }
+
+        .guest-services-section textarea {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 15px;
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            border: 1px solid #555;
+            border-radius: 4px;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="booking.html">BOOKING</a>
+        <a href="visitors.html">VISITORS</a>
+        <a href="rooms.html">ROOMS</a>
+        <a href="staff.html">STAFF</a>
+        <a href="billing.html">BILLING</a>
+        <a href="amenities.html">AMENITIES</a>
+    </nav>
+    <section class="billing-section">
+        <h2>Billing Information</h2>
+        <p>This page provides details about your transactions . No current payments are pending.</p>
+
+        <div class="billing-details">
+            <h3>Transaction Processing</h3>
+            <ul>
+                <li><strong>Payment Methods:</strong> We accept major credit cards (Visa, MasterCard, American Express), debit cards, and online bank transfers.</li>
+                <li><strong>Currency:</strong> All transactions are processed in Indian Rupees (INR).</li>
+                <li><strong>Security:</strong> Your payment information is securely processed using industry-standard encryption protocols.</li>
+                <li><strong>Confirmation:</strong> A payment confirmation email will be sent to your registered email address after each successful transaction.</li>
+            </ul>
+
+            <h3>Bill Calculation Details</h3>
+            <ul>
+                <li><strong>Room Charges:</strong> Room rates are calculated based on the number of nights stayed, and include applicable taxes.</li>
+                <li><strong>Additional Services:</strong> Charges for services such as dining, spa treatments, laundry, and room service will be added to your final bill.</li>
+                <li><strong>Taxes and Fees:</strong> All applicable taxes and service fees will be itemized on your bill.</li>
+                <li><strong>Discounts and Offers:</strong> Any applicable discounts or promotional offers will be applied at the time of checkout.</li>
+            </ul>
+
+            <h3>No Pending Payments</h3>
+            <p>You currently have no pending payments. This information is provided for your future reference.</p>
+        </div>
+
+        <div class="payment-options">
+            <p>For any billing-related inquiries, please contact our guest services team.</p>
+            <button id="contactButton">Contact Guest Services</button>
+        </div>
+    </section>
+
+    <section class="guest-services-section" id="guestServicesSection">
+        <h3>Guest Services Contact</h3>
+        <p>Please enter your message below:</p>
+        <textarea id="guestMessage" rows="4" placeholder="Your message..."></textarea>
+        <p>Contact us at: <a href="mailto:guestservices@thebharathotel.com">guestservices@thebharathotel.com</a></p>
+        <p>Or call us at: +91 9806543731 </p>
+        <button id="closeButton">Close</button>
+    </section>
+
+    <script>
+        document.getElementById('contactButton').addEventListener('click', function() {
+            document.getElementById('guestServicesSection').style.display = 'block';
+        });
+
+        document.getElementById('closeButton').addEventListener('click', function() {
+            document.getElementById('guestServicesSection').style.display = 'none';
+        });
+    </script>
+</body>
+</html>

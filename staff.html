@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE BHARAT Hotel - Staff</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://www.pnakindia.com/img/hotel-about.png');
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+            background-color: rgba(0, 0, 0, 0.4);
+            overflow-x: hidden;
+        }
+
+        nav {
+            background-color: rgba(30, 30, 30, 0.9);
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a {
+            color: #e0e0e0;
+            text-decoration: none;
+            margin: 0 25px;
+            padding: 12px 20px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            position: relative;
+        }
+
+        nav a:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #ffcc00;
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.3s ease-in-out 0s;
+        }
+
+        nav a:hover:before, nav a.active:before {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+
+        nav a:hover {
+            background-color: rgba(51, 51, 51, 0.8);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .section {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .section h2 {
+            color: #ffcc00;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section h2:before {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background-color: #ffcc00;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .staff-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 columns of equal width */
+            gap: 25px;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        .staff-member {
+            background-color: rgba(30, 30, 30, 0.8);
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .staff-member:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        .staff-image {
+            width: 100%; /* Equal width images */
+            height: auto;
+            max-width: 200px; /* Limit image size if needed */
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 20px; /* Center images and add margin */
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease;
+        }
+
+        .staff-image:hover {
+            transform: scale(1.05);
+        }
+
+        .staff-member h3 {
+            color: #e0e0e0;
+            margin-bottom: 8px;
+            font-size: 1.2em;
+        }
+
+        .staff-member p {
+            color: #ccc;
+            margin-bottom: 12px;
+            font-size: 0.95em;
+        }
+
+        .staff-member strong {
+            color: #ffcc00;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="booking.html">BOOKING</a>
+        <a href="visitors.html">VISITORS</a>
+        <a href="rooms.html">ROOMS</a>
+        <a href="staff.html">STAFF</a>
+        <a href="billing.html">BILLING</a>
+        <a href="amenities.html">AMENITIES</a>
+    </nav>
+    <section class="section staff-section">
+        <h2>Our Dedicated Staff</h2>
+        <p>Meet the team that makes your stay at THE BHARAT exceptional. We pride ourselves on the professionalism and dedication of our staff, who are committed to providing you with the highest level of service.</p>
+        <div class="staff-container">
+            <div class="staff-member">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShAJK5Pel837OmsoH_VhlQjvLayQzi9Zafiw&s" alt="Mrs. Anjali Sharma" class="staff-image">
+                <h3>Mrs. Anjali Sharma</h3>
+                <p><strong>General Manager</strong></p>
+                <p>Mrs. Anjali Sharma brings over 15 years of experience in hotel management.</p>
+            </div>
+            <div class="staff-member">
+                <img src="https://www.ihcltata.com/content/dam/thrp/leadership/2x3/Mr-Chhatwal-new_design.jpg" alt="Mr. Vikram Singh" class="staff-image">
+                <h3>Mr. Vikram Singh</h3>
+                <p><strong>Head Chef</strong></p>
+                <p>Mr. Vikram Singh is the culinary genius behind our restaurant, 'The Spice Route.'</p>
+            </div>
+            <div class="staff-member">
+                <img src="https://plus.unsplash.com/premium_photo-1683134374806-9ea735de4b37?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aG90ZWwlMjBzdGFmZnxlbnwwfHwwfHx8MA%3D%3D" alt="Ms. Priya Patel" class="staff-image">
+                <h3>Ms. Priya Patel</h3>
+                <p><strong>Front Desk Manager</strong></p>
+                <p>Ms. Priya Patel is the welcoming face of THE BHARAT.</p>
+            </div>
+             <div class="staff-member">
+                <img src="https://www.shutterstock.com/image-photo/indian-male-hotel-reception ist-wearing-260nw-2293138679.jpg" alt="Mr. Deepak Kumar" class="staff-image">
+                <h3>Mr. Deepak Kumar</h3>
+                <p><strong>Housekeeping Supervisor</strong></p>
+                <p>Mr. Deepak Kumar oversees our housekeeping team.</p>
+            </div>
+            <div class="staff-member">
+                <img src="https://media.istockphoto.com/id/481507989/photo/indian-concierge-welcome-guest-at-hotel-entrance-india.jpg?s=612x612&w=0&k=20&c=mnvuPkx7BdabB17pDqbe5iqhUbHyuYqObxmdhAz7k5E=" alt="Mr. Rajesh Tiwari" class="staff-image">
+                <h3>Mr. Rajesh Tiwari</h3>
+                <p><strong>Maintenance Engineer</strong></p>
+                <p>Mr. Rajesh Tiwari is responsible for the smooth operation of all hotel facilities.</p>
+            </div>
+            <div class="staff-member">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/An_Oberoi_Hotel_employee_doing_Namaste%2C_New_Delhi.jpg" alt="Ms. Sunita Reddy" class="staff-image">
+                <h3>Ms. Sunita Reddy</h3>
+                <p><strong>Yoga and Wellness Expert</strong></p>
+                <p>Ms. Sunita Reddy manages our world-class yoga and wellness centre.</p>
+            </div>
+            <div class="staff-member">
+                <img src="https://img.freepik.com/premium-photo/smiling-indian-man-hotel-staff-uniform-with-warm-smile_464863-18834.jpg" alt="Mr. Amit Patel" class="staff-image">
+                <h3>Mr. Amit Patel</h3>
+                <p><strong>Banquet Manager</strong></p>
+                <p>Mr. Amit Patel oversees our banquet and event services.</p>
+            </div>
+            <div class="staff-member">
+                <img src="https://www.eihltd.com/-/media/eihltd/home-page/annual-report-career/career-at-eih.jpg" alt="Ms. Kavita Sharma" class="staff-image">
+                <h3>Ms. Kavita Sharma</h3>
+                <p><strong>Sales and Marketing Manager</strong></p>
+                <p>Ms. Kavita Sharma is responsible for promoting THE BHARAT.</p>
+            </div>
+            <div class="staff-member">
+                <img src="https://i.timesnowhindi.com/stories/Dayanand_Shetty_Birthday.jpg?tr=w-1200,h-900" alt="Mr. Sanjay Singh" class="staff-image">
+                <h3>Mr. Daya Singh</h3>
+                <p><strong>Security Supervisor</strong></p>
+                <p>Mr. Daya Singh leads our security team.</p>
+            </div>
+            <div class="staff-member">
+                <img src="https://media.licdn.com/dms/image/v2/D4E22AQGEuSNEl9wbUQ/feedshare-shrink_800/B4EZS7BUIYGgAk-/0/1738304474854?e=2147483647&v=beta&t=SS206cOi5jZg_YJvaEiDZEwliGDE4G5_04mJlMlpI_s" alt="Ms. Meena Kumari" class="staff-image">
+                <h3>Ms. Meena Kumari</h3>
+                <p><strong>Guest Relations Manager</strong></p>
+                <p>Ms. Meena Kumari ensures that every guest has a memorable and comfortable stay.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section staff-section">
+        <h2>Our Supporting Team</h2>
+        <p>Meet the dedicated team members who work behind the scenes to ensure your stay is seamless and enjoyable.</p>
+        <div class="staff-container">
+            <div class="staff-member">
+                <img src="" alt="Ramesh Kumar" class="staff-image">
+                <h3>Ramesh Kumar</h3>
+                <p><strong>Room Attendant</strong></p>
+                <p>Ensures your room is clean and comfortable.</p>
+            </div>
+            <div class="staff-member">
+                <img src="https://via.placeholder.com/180" alt="Geeta Devi" class="staff-image">
+                <h3>Geeta Devi</h3>
+                <p><strong>Kitchen Assistant</strong></p>
+                <p>Assists in preparing delicious meals.</p>
+            </div>
+            <div class="staff-member">
+                <img src="https://via.placeholder.com/180" alt="Suresh Rao" class="staff-image">
+                <h3>Suresh Rao</h3>
+                <p><strong>Front Desk Assistant</strong></p>
+                <p>Helps with check-ins and inquiries.</p>
+            </div>
+            <div class="staff-member">
+                <img src="https://via.placeholder.com/180" alt="Anita Sharma" class="staff-image">
+                <h3>Anita Sharma</h3>
+                <p><strong>Laundry Staff</strong></p>
+                <p>Takes care of your laundry needs.</p>
+            </div>
+            <div class="staff-member">
+                <img src="https://via.placeholder.com/180" alt="Vijay Singh" class="staff-image">
+                <h3>Vijay Singh</h3>
+                <p><strong>Maintenance Assistant</strong></p>
+                <p>Keeps the hotel facilities in top condition.</p>
+            </div>
+            <div class="staff-member">
+                <img src="https://via.placeholder.com/180" alt="Lata Patel" class="staff-image">
+                <h3>Lata Patel</h3>
+                <p><strong>Spa Assistant</strong></p>
+                <p>Helps in providing relaxing spa services.</p>
+            </div>
+            <div class="staff-member">
+                <img src="https://via.placeholder.com/180" alt="Arvind Joshi" class="staff-image">
+                <h3>Arvind Joshi</h3>
+                <p><strong>Banquet Staff</strong></p>
+                <p>Assists in setting up and serving at events.</p>
+            </div>
+            <div class="staff-member">
+                <img src="https://via.placeholder.com/180" alt="Kiran Desai" class="staff-image">
+                <h3>Kiran Desai</h3>
+                <p><strong>Marketing Assistant</strong></p>
+                <p>Supports marketing and promotional activities.</p>
+            </div>
+            <div class="staff-member">
+                <img src="https://via.placeholder.com/180" alt="Babu Lal" class="staff-image">
+                <h3>Babu Lal</h3>
+                <p><strong>Security Guard</strong></p>
+                <p>Ensures the safety of guests and property.</p>
+            </div>
+            <div class="staff-member">
+                <img src="https://via.placeholder.com/180" alt="Maya Reddy" class="staff-image">
+                <h3>Maya Reddy</h3>
+                <p><strong>Guest Relations Assistant</strong></p>
+                <p>Assists in handling guest inquiries and requests.</p>
+            </div>
+            <div class="staff-member">
+                <img src="https://via.placeholder.com/180" alt="Mohan Tiwari" class="staff-image">
+                <h3>Mohan Tiwari</h3>
+                <p><strong>Bartender</strong></p>
+                <p>Serves a variety of beverages.</p>
+            </div>
+            <div class="staff-member">
+                <img src="https://via.placeholder.com/180" alt="Shanti Singh" class="staff-image">
+                <h3>Shanti Singh</h3>
+                <p><strong>Housekeeping Staff</strong></p>
+                <p>Maintains cleanliness in common areas.</p>
+            </div>
+            <div class="staff-member">
+                <img src="https://via.placeholder.com/180" alt="Rajeev Patel" class="staff-image">
+                <h3>Rajeev Patel</h3>
+                <p><strong>Chef Assistant</strong></p>
+                <p>Helps in food preparation.</p>
+            </div>
+            <div class="staff-member">
+                <img src="https://via.placeholder.com/180" alt="Deepika Kumar" class="staff-image">
+                <h3>Deepika Kumar</h3>
+                <p><strong>Receptionist</strong></p>
+                <p>Greets and assists guests.</p>
+            </div>
+            <div class="staff-member">
+                <img src="https://via.placeholder.com/180" alt="Kamal Verma" class="staff-image">
+                <h3>Kamal Verma</h3>
+                <p><strong>Gardener</strong></p>
+                <p>Maintains the hotel's gardens.</p>
+            </div>
+            <div class="staff-member">
+                <img src="https://via.placeholder.com/180" alt="Sunita Rao" class="staff-image">
+                <h3>Sunita Rao</h3>
+                <p><strong>Fitness Trainer</strong></p>
+                <p>Conducts fitness sessions.</p>
+            </div>
+            <div class="staff-member">
+                <img src="https://via.placeholder.com/180" alt="Ganesh Nair" class="staff-image">
+                <h3>Ganesh Nair</h3>
+                <p><strong>Event Coordinator Assistant</strong></p>
+                <p>Helps in organizing events.</p>
+            </div>
+            <div class="staff-member">
+                <img src="https://via.placeholder.com/180" alt="Shalini Desai" class="staff-image">
+                <h3>Shalini Desai</h3>
+                <p><strong>Sales Assistant</strong></p>
+                <p>Supports the sales team.</p>
+            </div>
+            <div class="staff-member">
+                <img src="https://via.placeholder.com/180" alt="Manish Reddy" class="staff-image">
+                <h3>Manish Reddy</h3>
+                <p><strong>Night Auditor</strong></p>
+                <p>Manages overnight operations.</p>
+            </div>
+            <div class="staff-member">
+                <img src="https://via.placeholder.com/180" alt="Sheetal Kapoor" class="staff-image">
+                <h3>Sheetal Kapoor</h3>
+                <p><strong>Travel Desk Assistant</strong></p>
+                <p>Assists with travel arrangements.</p>
+            </div>
+            <div class="staff-member">
+                <img src="https://via.placeholder.com/180" alt="Vivek Kumar" class="staff-image">
+                <h3>Vivek Kumar</h3>
+                <p><strong>Pool Attendant</strong></p>
+                <p>Maintains the pool area.</p>
+            </div>
+            <div class="staff-member">
+                <img src="https://via.placeholder.com/180" alt="Jyoti Sharma" class="staff-image">
+                <h3>Jyoti Sharma</h3>
+                <p><strong>Florist Assistant</strong></p>
+                <p>Helps with floral arrangements.</p>
+            </div>
+            <div class="staff-member">
+                <img src="https://via.placeholder.com/180" alt="Anand Singh" class="staff-image">
+                <h3>Anand Singh</h3>
+                <p><strong>Valet Parking Attendant</strong></p>
+                <p>Assists with parking services.</p>
+            </div>
+            <div class="staff-member">
+                <img src="https://via.placeholder.com/180" alt="Kavita Reddy" class="staff-image">
+                <h3>Kavita Reddy</h3>
+                <p><strong>Childcare Assistant</strong></p>
+                <p>Helps with children's activities.</p>
+            </div>
+            <div class="staff-member">
+                <img src="https://via.placeholder.com/180" alt="Sanjay Patel" class="staff-image">
+                <h3>Sanjay Patel</h3>
+                <p><strong>Storekeeper</strong></p>
+                <p>Manages hotel supplies.</p>
+            </div>
+            <div class="staff-member">
+                <img src="https://via.placeholder.com/180" alt="Ritu Desai" class="staff-image">
+                <h3>Ritu Desai</h3>
+                <p><strong>Pastry Chef Assistant</strong></p>
+                <p>Helps in pastry preparation.</p>
+            </div>
+            <div class="staff-member">
+                <img src="https://via.placeholder.com/180" alt="Mohan Joshi" class="staff-image">
+                <h3>Mohan Joshi</h3>
+                <p><strong>Purchasing Assistant</strong></p>
+                <p>Assists in procurement.</p>
+            </div>
+            <div class="staff-member">
+                <img src="https://via.placeholder.com/180" alt="Sneha Nair" class="staff-image">
+                <h3>Sneha Nair</h3>
+                <p><strong>HR Assistant</strong></p>
+                <p>Supports human resources activities.</p>
+            </div>
+            <div class="staff-member">
+                <img src="https://via.placeholder.com/180" alt="Raj Kumar" class="staff-image">
+                <h3>Raj Kumar</h3>
+                <p><strong>Driver</strong></p>
+                <p>Provides transportation services.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

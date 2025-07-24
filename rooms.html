@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>THE BHARAT Hotel - Rooms</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #e0e0e0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: #1e1e1e;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #e0e0e0;
+      text-decoration: none;
+      margin: 0 15px;
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #333;
+    }
+
+    .section {
+      padding: 40px;
+      background-color: #1e1e1e;
+    }
+
+    .section h2 {
+      color: #f0f0f0;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .room-category {
+      margin-bottom: 30px;
+      padding: 20px;
+      background-color: #2a2a2a;
+      border-radius: 8px;
+    }
+
+    .room-category h3 {
+      color: #f0f0f0;
+      margin-bottom: 20px;
+    }
+
+    .room-details {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    .room-image {
+      max-width: 300px;
+      width: 100%;
+      margin-right: 20px;
+      border-radius: 8px;
+    }
+
+    .room-info {
+      flex: 1;
+    }
+
+    .room-info ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .room-info li {
+      margin-bottom: 8px;
+      color: #ccc;
+    }
+
+    .room-price {
+      font-weight: bold;
+      margin-top: 15px;
+      color: #007bff;
+    }
+
+    .button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .button:hover {
+      background-color: #0056b3;
+    }
+
+    @media (max-width: 768px) {
+      .room-details {
+        flex-direction: column;
+      }
+
+      .room-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="booking.html">BOOKING</a>
+    <a href="visitors.html">VISITORS</a>
+    <a href="rooms.html">ROOMS</a>
+    <a href="staff.html">STAFF</a>
+    <a href="billing.html">BILLING</a>
+    <a href="amenities.html">AMENITIES</a>
+  </nav>
+
+  <section class="section room-section">
+    <h2>Our Luxurious Rooms and Suites</h2>
+    <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">
+      Experience unparalleled comfort and elegance in our meticulously designed rooms and suites. Each accommodation is crafted to provide you with a serene and luxurious retreat, ensuring a memorable stay at THE BHARAT.
+    </p>
+
+    <!-- Standard Room -->
+    <div class="room-category">
+      <h3>Standard Rooms - Comfort and Convenience</h3>
+      <div class="room-details">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpjNzIXYMjnQZvxs8r7K_Cl4FxagQi_SuEEQ&s" alt="Standard Room" class="room-image" />
+        <div class="room-info">
+          <p>Our Standard Rooms offer a blend of comfort and convenience, perfect for both leisure and business travelers. These rooms feature modern amenities and a cozy ambiance, ensuring a relaxing stay.</p>
+          <ul>
+            <li>Room Size: 25 sq. meters</li>
+            <li>Bed Type: King or Twin Beds</li>
+            <li>Amenities: Wi-Fi, Air Conditioning, Flat-Screen TV, Mini-Fridge, Tea/Coffee Maker</li>
+            <li>Bathroom: En-suite with Shower</li>
+            <li>View: City View</li>
+          </ul>
+          <p class="room-price">Price: ₹2899 per night</p>
+          <a href="booking.html?room=standard" class="button">Book Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Deluxe Room -->
+    <div class="room-category">
+      <h3>Deluxe Rooms - Enhanced Comfort</h3>
+      <div class="room-details">
+        <img src="https://www.oberoihotels.com/-/media/oberoi-hotels/website-images/the-oberoi-rajvilas-jaipur/room-and-suites/room-and-suite-gallery-1448x814/our-luxury-villas-with-private-pool/mg-7940.jpg" alt="Deluxe Room" class="room-image" />
+        <div class="room-info">
+          <p>Our Deluxe Rooms offer enhanced comfort with additional space and premium amenities. Enjoy a relaxing stay with elegant décor and thoughtful touches that cater to your every need.</p>
+          <ul>
+            <li>Room Size: 35 sq. meters</li>
+            <li>Bed Type: King Bed</li>
+            <li>Amenities: High-Speed Wi-Fi, Climate Control, Smart TV, Mini-Bar, Espresso Machine</li>
+            <li>Bathroom: En-suite with Bathtub and Shower</li>
+            <li>View: Garden or Pool View</li>
+          </ul>
+          <p class="room-price">Price: ₹4999 per night</p>
+          <a href="booking.html?room=deluxe" class="button">Book Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Executive Suite -->
+    <div class="room-category">
+      <h3>Executive Suites - Luxury and Space</h3>
+      <div class="room-details">
+        <img src="https://livefromalounge.com/wp-content/uploads/2017/12/The-Chedi_Mumbai.jpg" alt="Executive Suite" class="room-image" />
+        <div class="room-info">
+          <p>Our Executive Suites are designed for those seeking extra space and luxury. Featuring a separate living area, these suites provide the perfect setting for relaxation or conducting business.</p>
+          <ul>
+            <li>Room Size: 50 sq. meters</li>
+            <li>Bed Type: King Bed</li>
+            <li>Amenities: Complimentary Breakfast, Separate Living Area, Work Desk, Premium Wi-Fi, Fully Stocked Mini-Bar</li>
+            <li>Bathroom: Marble Bathroom with Jacuzzi and Shower</li>
+            <li>View: Panoramic City View</li>
+          </ul>
+          <p class="room-price">Price: ₹7499 per night</p>
+          <a href="booking.html?room=executive" class="button">Book Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Presidential Suite -->
+    <div class="room-category">
+      <h3>Presidential Suite - Ultimate Luxury</h3>
+      <div class="room-details">
+        <img src="https://via.placeholder.com/300x200?text=Presidential+Suite" alt="Presidential Suite" class="room-image equal-image">
+        <div class="room-info">
+          <p>Experience the pinnacle of luxury in our Presidential Suite. This expansive suite features a private balcony, dining area, and personalized butler service. It is designed to provide an unparalleled level of comfort and exclusivity.</p>
+          <ul>
+            <li>Room Size: 80 sq. meters</li>
+            <li>Bed Type: Super King Bed</li>
+            <li>Amenities: Private Balcony, Dining Area, Butler Service, Complimentary Airport Transfer, Premium Entertainment System</li>
+            <li>Bathroom: Luxury Bathroom with Steam Room and Jacuzzi</li>
+            <li>View: City Skyline and River View</li>
+          </ul>
+          <p class="room-price">Price: ₹9499 per night</p>
+          <a href="booking.html?room=presidential" class="button">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
